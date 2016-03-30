@@ -22,8 +22,8 @@ For example, when a database is defined as a host, the monitoring can continue i
 
 # Services
 
-This is the complete set of scripts in the previously defined two project.
-Each of these project is defined in a different way here.
+This is the complete set of scripts in the previously defined two projects.
+Each of these projects is defined in a different way here.
 Monitor-DB2-with-Nagios is a set of scripts run from command line, thus, they need the notion of server to connect to (via SSH or NRPE).
 On the other hand, db2-jnrpe has the notion of database, thus, they need the properties to connect to the database.
 
