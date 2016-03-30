@@ -15,7 +15,7 @@ The following elements are defined as hosts:
 * A DB2 instance (db2sysc process) running on a server is also considered as a host.
 * A DB2 database inside an instance is also considered a host.
 
-The last two elements could normally not be represented as an object in Nagios, or they can be treated as services;
+Normally, the last two elements could not be represented as an object in Nagios, they are often treated as services;
 however, this structure is more flexible and allows keep track of each of these elements, even if they change the location.
 
 For example, when a database is defined as a host, the monitoring can continue its history even if the database changes its instance or server.
