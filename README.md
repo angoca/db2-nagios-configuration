@@ -42,4 +42,4 @@ Even, this passive machine does not have the file systems where the database res
 With these last elements, one can identify if a server is active or passive.
 
 With the previous description, there is a script that always returns OK if it is executed from the passive node.
-If that node becomes the active node, the script with execute the whole process and returns the corresponding value.
+If that node becomes the active node, the script will execute the whole process and returns the corresponding value.
