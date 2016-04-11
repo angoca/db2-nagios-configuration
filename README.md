@@ -15,14 +15,18 @@ The following elements are defined as hosts:
 * A DB2 instance (db2sysc process) running on a server is also considered as a host.
 * A DB2 database inside an instance is also considered a host.
 
-Normally, the last two elements could not be represented as an object in Nagios, they are often treated as services;
-however, this structure is more flexible and allows keep track of each of these elements, even if they change the location.
-
-For example, when a database is defined as a host, the monitoring can continue its history even if the database changes its instance or server.
+You need to modify this file according to your own environment.
+The name of the objects are generic, and it is highly advisible to modify them with a Replace All function, in order to prevent errors.
+There is an example at the nd of this file that points to a sample database in a db2inst1 instance.
 
 **NOTE**: If you are going to define only stand-alone databases, you need to preserve the `hosts_databases_db2_normal.cfg` file and delete the `hosts_databases_db2_cluster.cfg`.
 If you are going to define OS clustered databases, you need to preserve the `hosts_databases_db2_cluster.cfg` file and delete the `hosts_databases_db2_normal.cfg`.
 Finally, if you are going to define both types of databases you preserve both files.
+
+Normally, the last two elements could not be represented as an object in Nagios, they are often treated as services;
+however, this structure is more flexible and allows keep track of each of these elements, even if they change the location.
+
+For example, when a database is defined as a host, the monitoring can continue its history even if the database changes its instance or server.
 
 # Services
 
