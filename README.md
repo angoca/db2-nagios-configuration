@@ -64,3 +64,10 @@ With these last elements, one can identify if a server is active or passive.
 
 With the previous description, there is a script that always returns OK if it is executed from the passive node.
 If that node becomes the active node, the script will execute the whole process and returns the corresponding value.
+
+# Common errors
+
+When plugins say "(Return code of 255 is out of bounds)", make sure the remote host has been added in the known_hosts.
+You can force this by executing the following command for each host:
+
+    ssh -o StrictHostKeyChecking=no username@hostname
