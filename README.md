@@ -70,4 +70,4 @@ If that node becomes the active node, the script will execute the whole process 
 When plugins say "(Return code of 255 is out of bounds)", make sure the remote host has been added in the known_hosts.
 You can force this by executing the following command for each host:
 
-    ssh -o StrictHostKeyChecking=no username@hostname
+    ssh -o StrictHostKeyChecking=no hostname
