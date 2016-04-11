@@ -20,6 +20,12 @@ however, this structure is more flexible and allows keep track of each of these 
 
 For example, when a database is defined as a host, the monitoring can continue its history even if the database changes its instance or server.
 
+You need to define the following elements:
+
+* The location of the `check_by_ssh` command in the `USER5` macro.
+* The location of the SSH private key of the id_rsa/id_dsa certificate in the `USER6` macro.
+* The location of the `check_nrpe` command in the `USER7` macro
+
 # Services
 
 This is the complete set of scripts in the previously defined two projects.
