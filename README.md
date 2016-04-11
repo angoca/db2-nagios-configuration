@@ -20,14 +20,6 @@ however, this structure is more flexible and allows keep track of each of these 
 
 For example, when a database is defined as a host, the monitoring can continue its history even if the database changes its instance or server.
 
-You need to define the following elements:
-
-* The location of the `check_by_ssh` command in the `USER5` macro.
-* The location of the SSH private key of the id_rsa/id_dsa certificate in the `USER6` macro.
-* The location of the `check_nrpe` command in the `USER7` macro
-
-When using OMD, the previous variables are defined in the resources.cfg file.
-
 # Services
 
 This is the complete set of scripts in the previously defined two projects.
@@ -41,6 +33,14 @@ The commands are configured to run on the server or the database.
 For database connections, they connect directly to the database.
 Instead, for the commands run from command line, they have to connect to the server and then run the command.
 This execution can be cluster-aware, that means when the execution is run from a passive node, all commands return OK.
+
+You need to define the following elements for this file:
+
+* The location of the `check_by_ssh` command in the `USER5` macro.
+* The location of the SSH private key of the id_rsa/id_dsa certificate in the `USER6` macro.
+* The location of the `check_nrpe` command in the `USER7` macro
+
+When using OMD, the previous variables are defined in the resources.cfg file, thus you do not need to modify this file.
 
 # Cluster awareness
 
