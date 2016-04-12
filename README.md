@@ -39,6 +39,10 @@ On the other hand, db2-jnrpe has the notion of database, thus, they need the pro
 If you are going to define OS clustered databases, you need to preserve the `services_databases_db2_cluster.cfg` file and delete the `services_databases_db2_normal.cfg`.
 Finally, if you are going to define both types of databases you preserve both files.
 
+## Custom configuration
+
+You can create your own services configuration file to define your own values inheriting from this configuration.
+This allows to separate templates and global values from specific configuration.
 
 # Commands
 
