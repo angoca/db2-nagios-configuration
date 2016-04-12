@@ -106,6 +106,9 @@ With these last elements, one can identify if a server is active or passive.
 With the previous description, there is a script that always returns OK if it is executed from the passive node.
 If that node becomes the active node, the script will execute the whole process and returns the corresponding value.
 
+You need to define the directory only-mounted on the active node with the __directory_active_node variable.
+This variable is only user in the hosts_databases_db2_3_cluster.cfg file.
+
 # Common errors
 
 When plugins say "(Return code of 255 is out of bounds)", make sure the remote host has been added in the known_hosts.
