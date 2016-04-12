@@ -72,9 +72,8 @@ Each of these projects is defined in a different way here.
 Monitor-DB2-with-Nagios is a set of scripts run from command line, thus, they need the notion of server to connect to (via SSH or NRPE).
 On the other hand, db2-jnrpe has the notion of database, thus, they need the properties to connect to the database.
 
-**NOTE**: If you are going to define only stand-alone databases, you need to preserve the `services_databases_db2_normal.cfg` file and delete the `services_databases_db2_cluster.cfg`.
-If you are going to define OS clustered databases, you need to preserve the `services_databases_db2_cluster.cfg` file and delete the `services_databases_db2_normal.cfg`.
-Finally, if you are going to define both types of databases you preserve both files.
+**NOTE**: If you are going to define only stand-alone databases, you need to delete the `services_databases_db2_3_cluster.cfg`.
+
 
 ### Custom configuration
 
