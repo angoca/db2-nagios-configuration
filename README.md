@@ -10,6 +10,36 @@ The objects are defined in a non-traditional way, and for this reason it is impo
 It is recommended to create a directory dedicated for these files in your Nagios configuration directory.
 This prevents to be modified for other things different from DB2.
 
+# Prerequisites
+
+You need to configure both monitor mechanisms to monitor DB2.
+
+## Monitor DB2 with Nagios
+
+You need to download and extract the scripts in a directory in each server where the scripts are executed.
+This directory should be indicated in the Nagios configuration.
+Make sure the scripts are executable (`chmod u+x *`).
+
+If you use SSH to run the remote scripts, make sure each server is in the known_hosts file of the .ssh directory.
+Port 22 should be opened between Nagios server and database server.
+
+If you use nrpe to run the remove scripts, make sure the remote configuration is according your needs.
+Port 5666 should be opened between Nagios server and database server.
+
+More information in the [Wiki of this project.](https://github.com/angoca/monitor-db2-with-nagios/wiki)
+
+## db2-jnrpe
+
+You need to configure jnrpe in order to run the scripts from the Nagios server, or another server designated to use jnrpe.
+jNRPE needs java to run.
+It is not necessary to run jNRPE in the database servers; these scripts can run remotely via JDBC connection.
+
+If jnrpe is not local to Nagios, the port 5666 should be opened between the Nagios server and the jNRPE server.
+If db2-jnrpe is not local to DB2, the instance port should be opened between the jNRPE server and the database server;
+in many configurations the port is 50000, but it could change or there could be many instances to monitor.
+
+More information in the [Wiki of this project.](https://github.com/angoca/db2-jnrpe/wiki)
+
 # Hosts
 
 The following elements are defined as hosts:
