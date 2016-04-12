@@ -7,9 +7,6 @@ This project consists of a set of scripts that have the structure to define the 
 
 The objects are defined in a non-traditional way, and for this reason it is important to understand the Nagios structure (hosts, services and commands) and DB2 structure (servers, instances, databases).
 
-It is recommended to create a directory dedicated for these files in your Nagios configuration directory.
-This prevents to be modified for other things different from DB2.
-
 # Prerequisites
 
 You need to configure both monitor mechanisms to monitor DB2.
@@ -40,7 +37,14 @@ in many configurations the port is 50000, but it could change or there could be 
 
 More information in the [Wiki of this project.](https://github.com/angoca/db2-jnrpe/wiki)
 
-# Hosts
+# Installation
+
+You just need to download this project and put them in the Nagios configuration directory.
+It is recommended to create a directory dedicated for these files in your Nagios configuration directory;
+this prevents to be modified for other things different from DB2.
+
+
+## Hosts
 
 The following elements are defined as hosts:
 
@@ -61,7 +65,7 @@ however, this structure is more flexible and allows keep track of each of these 
 
 For example, when a database is defined as a host, the monitoring can continue its history even if the database changes its instance or server.
 
-# Services
+## Services
 
 This is the complete set of scripts in the previously defined two projects.
 Each of these projects is defined in a different way here.
@@ -72,12 +76,12 @@ On the other hand, db2-jnrpe has the notion of database, thus, they need the pro
 If you are going to define OS clustered databases, you need to preserve the `services_databases_db2_cluster.cfg` file and delete the `services_databases_db2_normal.cfg`.
 Finally, if you are going to define both types of databases you preserve both files.
 
-## Custom configuration
+### Custom configuration
 
 You can create your own services configuration file to define your own values inheriting from this configuration.
 This allows to separate templates and global values from specific configuration.
 
-# Commands
+## Commands
 
 The commands are configured to run on the server or the database.
 For database connections, they connect directly to the database.
