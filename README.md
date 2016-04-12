@@ -7,6 +7,9 @@ This project consists of a set of scripts that have the structure to define the 
 
 The objects are defined in a non-traditional way, and for this reason it is important to understand the Nagios structure (hosts, services and commands) and DB2 structure (server, instance, database).
 
+It is recommended to create a directory dedicated for these files in your Nagios configuration directory.
+This prevents to be modified for other things different from DB2.
+
 # Hosts
 
 The following elements are defined as hosts:
