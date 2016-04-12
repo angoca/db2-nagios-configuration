@@ -5,7 +5,7 @@ This project helps you to configure Nagios in order to monitor your DB2 database
 
 This project consists of a set of scripts that have the structure to define the necessary objects to monitor DB2.
 
-The objects are defined in a non-traditional way, and for this reason it is important to understand the Nagios structure (hosts, services and commands) and DB2 structure (server, instance, database).
+The objects are defined in a non-traditional way, and for this reason it is important to understand the Nagios structure (hosts, services and commands) and DB2 structure (servers, instances, databases).
 
 It is recommended to create a directory dedicated for these files in your Nagios configuration directory.
 This prevents to be modified for other things different from DB2.
